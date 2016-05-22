@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8" >
+		<meta name="description" content="beschrijving van de webpagina" >
+		<meta name="keywords" content="trefwoorden, gescheiden, door, komma's">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Les 5.1</title>
+
+		<script src="js/jquery-1.11.2.min.js"></script>
+
+		<script>
+			 
+			$(document).ready(function(){
+				$("ul li").click(zetInVet);
+			});
+			
+			function zetInVet()
+			{
+				$(this).css("font-weight","bold");
+			}
+			
+		</script>
+
+	</head>
+
+	<body>
+
+	<h1>Les 5</h1>
+	
+		<ul>
+			<li>Beersel</li>
+			<li>Halle</li>
+			<li>Dworp</li>
+			<li>Buizingen</li>
+			<li>Brussel</li>
+		</ul>
+	
+	</body>
+</html>
+ 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8" >
+		<meta name="description" content="beschrijving van de webpagina" >
+		<meta name="keywords" content="trefwoorden, gescheiden, door, komma's">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Les 5</title>
+
+		<script src="js/jquery-1.11.2.min.js"></script>
+
+		<script>
+					 	
+			$(document).ready(function(){
+				$("ul").on("click","li", changeFont);
+				$("#submit").click(toevoegen);
+			});
+			
+			function changeFont()
+			{
+				var font = $(this).css("font-weight");
+				
+				if (font == "bold") 
+				{
+					$(this).css("font-weight","normal");
+				}
+				else
+				{
+					$(this).css("font-weight","bold");
+				}
+			}
+			
+			function toevoegen()
+			{
+				var stad = $("#invoer").val();
+				$("ul").append("<li>" + stad +  "</li>")
+			}
+			
+		</script>
+
+	</head>
+
+	<body>
+
+	<h1>Les 5</h1>
+	
+		<ul>
+			<li>Beersel</li>
+			<li>Halle</li>
+			<li>Dworp</li>
+			<li>Buizingen</li>
+			<li>Brussel</li>
+		</ul>
+		
+		<p>Voeg plaats toe:</p>
+		<input type="text" id="invoer">
+		<input type="button" id="submit" value="Voeg toe">
+	
+	</body>
+</html>
+ 

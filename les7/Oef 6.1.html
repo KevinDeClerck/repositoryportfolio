@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8" >
+		<meta name="description" content="beschrijving van de webpagina" >
+		<meta name="keywords" content="trefwoorden, gescheiden, door, komma's">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>oef 5.1</title>
+
+		<script src="js/jquery-1.11.2.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#kleiner").click(function() {
+					var grootte = parseFloat($("p").css("font-size"));
+					$("p").css("font-size", (0.8 * grootte) + "px");
+				}); 
+				$("#groter").click(function() {
+					var grootte = parseFloat($("p").css("font-size"));
+					$("p").css("font-size", (1.2 * grootte) + "px");
+				});
+			});
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="paginafuncties">
+			Tekst:
+			<button id="kleiner">
+				Kleiner
+			</button>
+			<button id="groter">
+				Groter
+			</button>
+		</div>
+
+		<h1>jQuery - de Basis</h1>
+		<p>
+			Lorum ejend kei nh eeeui ebeube beb uebeu e,eineu jbeyeeee ejeejlkjzenfiuafg zafhzefyga efuaefzayfgazjh.
+		</p>
+
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8" >
+		<meta name="description" content="beschrijving van de webpagina" >
+		<meta name="keywords" content="trefwoorden, gescheiden, door, komma's">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Oef 3.1 p. 84-85</title>
+
+		<script src="js/jquery-1.11.2.min.js"></script>
+
+		<script>
+		$(document).ready(function(){
+			
+			var plaats = $("li").last().detach();
+			var aantal = $("ul li").length;
+			$("body").prepend("Aantal plaatsen " + aantal);
+			$("ul").prepend(plaats);
+			
+			var index3 = $("li").eq(3).text();
+			$("body").append("Weer 3: " + index3);
+
+		})
+		</script> 
+
+	</head>
+
+	<body>
+
+	<h1>Oef 3.1 p. 84-85</h1>
+	
+		<ul>
+			<li>Beersel - 20°C</li>
+			<li>Halle - 7°C</li>
+			<li>Dworp - 2°C</li>
+			<li>Buizingen - 6°C</li>
+			<li>Brussel - 9°C</li>
+		</ul>
+	
+	</body>
+</html>
+ 

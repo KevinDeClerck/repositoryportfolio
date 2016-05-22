@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8" >
+		<meta name="description" content="beschrijving van de webpagina" >
+		<meta name="keywords" content="trefwoorden, gescheiden, door, komma's">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dambord</title>
+		
+		<style type="text/css">
+		
+			div{
+				float: left;
+			} 
+		
+			.zwart{
+				background-color: black;
+			}
+			
+			.wit{
+				background-color: white;
+			}
+			
+			.zwart, .wit{
+				width: 50px;
+				height: 50px;	
+			}
+			
+			#bord{
+				width: 500px;
+				border: solid 2px black;
+			}
+			
+			img{
+				margin: 5px 0% 0% 5px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+
+		<h1>Dambord</h1>
+		
+		<div id="bord">
+			<script>
+				
+				for(var count = 0; count < 10; count++)
+				{
+					if(count%2 == 0)
+					{
+						for (var oneven = 0; oneven < 10; oneven++) 
+						{
+							if(oneven%2 == 1)
+							{
+								if(count == 0 || count == 2)
+								{
+									document.write('<div class="zwart"><img src="roodPion.png" title="pionRood" alt="rode pion"></div>')
+								}
+								else if(count == 6 || count == 8)
+								{
+									document.write('<div class="zwart"><img src="zwartPion.png" title="poinZwart" alt="zwarte pion"></div>')
+								}
+								else
+								{
+									document.write('<div class="zwart"> </div>')
+								}
+								
+							}
+							else
+							{
+								document.write('<div class="wit"> </div>')
+							}
+						}
+					}
+					
+					if(count%2 == 1)
+					{
+						for (var even = 0; even < 10; even++) 
+						{
+							if(even%2 == 0)
+								if(count == 1 || count == 3)
+								{
+									document.write('<div class="zwart"><img src="roodPion.png" title="pionRood" alt="rode pion"></div>')
+								}
+								else if(count == 7 || count == 9)
+								{
+									document.write('<div class="zwart"><img src="zwartPion.png" title="pionZwart" alt="zwarte pion"></div>')
+								}
+								else
+								{
+									document.write('<div class="zwart"> </div>')
+								}
+							else
+							{
+								document.write('<div class="wit"> </div>')
+							}
+						}	
+					}
+				}
+
+			</script>
+		</div>
+
+	</body>
+</html>
